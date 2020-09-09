@@ -8,8 +8,7 @@ jobs:
   auto-assign-reviewer:
     runs-on: ubuntu-latest
     steps:
-      - name: Run assignment of reviewer team
-        uses: nikosmoum/auto-assign-reviewer-team@v0.5
-        with:
-          githubToken: ${{ secrets.MYGITHUB_TOKEN }}
-          teamName: 'abc'
+    - uses: shufo/auto-assign-reviewer-by-issuer@v1.0.0
+      with:
+        config: '.github/auto_assign.yml'
+        token: ${{ secrets.MYGITHUB_TOKEN }}
