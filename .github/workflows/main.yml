@@ -1,5 +1,10 @@
 name: 'Auto Assign'
-on: pull_request
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'releases/*'
 
 jobs:
   add-reviews:
